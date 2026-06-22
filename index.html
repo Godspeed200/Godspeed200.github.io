@@ -2,27 +2,83 @@
 <html>
 <head>
     <title>Mijn Website</title>
+
     <style>
         body {
-            font-family: Arial;
-            text-align: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
+
+        /* Navbar */
+        .navbar {
+            background-color: #0078d4;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* Content */
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
         h1 {
             color: #0078d4;
         }
+
+        /* Card */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Button */
+        .btn {
+            padding: 10px 20px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #005fa3;
+        }
     </style>
 </head>
-<body>
-    <h1>Welkom op mijn website! Mijn naam is Botie John Sina van de Sinas familie  🚀</h1>
-    <p>Ik doe piep piep, dus tief op ^^</p>
 
-    <!<button onclick="klik()">Klik mij</button>/*-->
+<body>
+
+    <div class="navbar">
+        Mijn Website 🚀
+    </div>
+
+    <div class="container">
+
+        <h1>Welkom op mijn website! Mijn naam is Botie John Sina van de Sinas familie 🚀</h1>
+
+        <div class="card">
+            <p>Ik doe piep piep, dus tief op ^^</p>
+
+            <!-- Button staat nu correct -->
+            <button class="btn" onclick="klik()">Klik mij</button>
+        </div>
+
+    </div>
 
     <script>
         function klik() {
-            alert("Het werkt!");
+            alert("Muahahahah!");
         }
     </script>
+
 </body>
 </html>
