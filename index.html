@@ -3,33 +3,34 @@
 <head>
     <title>Mijn Website</title>
 
-    <!-- Link naar CSS -->
+    <!-- CSS koppeling -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="navbar">
-        Mijn Website 🚀
-    </div>
-
     <div class="container">
 
-        <h1>Welkom op mijn website! Mijn naam is Botie John Sina van de Sinas familie 🚀</h1>
+        <h1 id="title">
+            Welkom op mijn website! Mijn naam is Botie John Sina van de Sinas familie 🚀
+        </h1>
 
         <div class="card">
-            <p>Ik doe piep piep, dus tief op ^^</p>
+            <p id="text">
+                Ik doe piep piep, dus tieft op ^^
+            </p>
 
+            <!-- Buttons blijven -->
             <button class="btn" onclick="klik()">Klik mij</button>
+            <button class="btn" onclick="veranderTekst()">Verander tekst</button>
+            <button class="btn" onclick="kleurVeranderen()">Andere kleur</button>
+            <button class="btn" onclick="verberg()">Verberg tekst</button>
         </div>
 
     </div>
 
-    <script>
-        function klik() {
-            alert("PIEP");
-        }
-    </script>
+    <!-- JS koppeling -->
+    <script src="script.js"></script>
 
 </body>
 </html>
