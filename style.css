@@ -5,16 +5,26 @@ body {
     color: white;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
+
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0,0,0,0.3);
-    padding: 15px 20px;
-    backdrop-filter: blur(10px);
+
+    padding: 15px 30px;
+
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+/* Logo */
 .logo {
     font-size: 20px;
     font-weight: bold;
@@ -24,29 +34,38 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    gap: 25px;
 }
 
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
+/* Link style */
+.nav-links li a {
     color: white;
     text-decoration: none;
+    position: relative;
+    font-size: 16px;
+}
+
+/* Underline animation */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #00c6ff;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #00c6ff;
+.nav-links li a:hover::after {
+    width: 100%;
 }
 
-/* Hamburger (mobile) */
+/* Hamburger */
 .menu-toggle {
     display: none;
+    font-size: 26px;
     cursor: pointer;
-    font-size: 24px;
 }
 
 /* Container */
@@ -108,7 +127,6 @@ body {
     transform: scale(1.05);
 }
 
-/* 📱 Mobile */
 @media (max-width: 768px) {
 
     .menu-toggle {
@@ -116,23 +134,27 @@ body {
     }
 
     .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: rgba(0,0,0,0.9);
-        width: 100%;
-        flex-direction: column;
-        display: none;
-        text-align: center;
-    }
+        position: fixed;
+        top: 0;
+        right: -100%;   /* start off screen */
+        height: 100vh;
+        width: 250px;
 
-    .nav-links li {
-        margin: 15px 0;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        transition: right 0.3s ease;
     }
 
     .nav-links.active {
-        display: flex;
+        right: 0;
     }
-}
-``
+
+    .nav-links li {
+        margin: 20px 0;
+    }
 }
