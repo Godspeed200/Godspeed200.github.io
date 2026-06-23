@@ -108,18 +108,31 @@ body {
     transform: scale(1.05);
 }
 
-/* 📱 Extra mobile tweaks */
-@media (max-width: 500px) {
+/* 📱 Mobile */
+@media (max-width: 768px) {
 
-    .title {
-        font-size: 20px;   /* kleinere tekst */
+    .menu-toggle {
+        display: block;
     }
 
-    .card {
-        padding: 15px;
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        width: 100%;
+        flex-direction: column;
+        display: none;
+        text-align: center;
     }
 
-    .btn {
-        width: 100%;       /* buttons onder elkaar */
+    .nav-links li {
+        margin: 15px 0;
     }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+``
 }
