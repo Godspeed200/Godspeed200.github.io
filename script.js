@@ -1,30 +1,13 @@
 function klik() {
-    alert("Nice! Het werkt 🎉");
+    alert("🚀 Welcome to Botie SaaS");
 }
 
 function veranderTekst() {
     document.getElementById("text").innerText =
-        "🔥 Je hebt de tekst aangepast!";
+        "System running at 100% performance ✅";
 }
 
 function kleurVeranderen() {
     document.body.style.background =
-        "linear-gradient(135deg, #" +
-        Math.floor(Math.random()*16777215).toString(16) +
-        ", #000)";
-}
-
-function verberg() {
-    let el = document.getElementById("text");
-
-    if (el.style.display === "none") {
-        el.style.display = "block";
-    } else {
-        el.style.display = "none";
-    }
-}
-
-function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
+        "radial-gradient(circle at top, #1f4037, #000000)";
 }
