@@ -1,52 +1,68 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mijn Website</title>
-
+    <title>Botie SaaS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav class="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Botie™</div>
+        <div class="nav-links">
+            <a>#Product</a>
+            <a>#Solutions</a>
+            <a>#Contact</a>
+        </div>
+    </nav>
 
-    <div class="logo">Botie 🚀</div>
+    <!-- HERO -->
+    <section class="hero">
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
-    </div>
-
-    <ul class="nav-links" id="navLinks">
-        <li>#Home</a></li>
-        <li>#Over mij</a></li>
-        <li>#Projecten</a></li>
-        <li>#Contact</a></li>
-    </ul>
-
-</nav>
-
-    <div class="container">
-
-        <h1 class="title">
-            Welkom op mijn website! Mijn naam is Botie John Sina van de Sinas familie 🚀
-        </h1>
-
-        <div class="card">
-            <p id="text">
-                Ik doe piep piep, dus tief op ^^
+        <!-- LINKS -->
+        <div class="hero-left">
+            <h1>Size and simulate<br>power systems fast</h1>
+            <p>
+                Experience modern engineering workflow with
+                high performance simulations and clean UI.
             </p>
 
             <div class="buttons">
-                <button class="btn" onclick="klik()">Klik mij</button>
-                <button class="btn" onclick="veranderTekst()">Verander tekst</button>
-                <button class="btn" onclick="kleurVeranderen()">Andere kleur</button>
-                <button class="btn" onclick="verberg()">Verberg tekst</button>
+                <button class="primary" onclick="klik()">Get Started</button>
+                <button class="secondary">View demo</button>
             </div>
         </div>
 
-    </div>
+        <!-- RECHTS (MOCK UI) -->
+        <div class="hero-right">
+
+            <div class="device">
+
+                <div class="screen">
+                    <h2>Dashboard</h2>
+                    <p id="text">Ready for interaction</p>
+
+                    <div class="mock-buttons">
+                        <button onclick="veranderTekst()">Update</button>
+                        <button onclick="kleurVeranderen()">Theme</button>
+                    </div>
+
+                    <div class="mock-grid">
+                        <div>Analytics</div>
+                        <div>Settings</div>
+                        <div>Reports</div>
+                        <div>Users</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <script src="script.js"></script>
 
