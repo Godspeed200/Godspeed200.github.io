@@ -1,5 +1,5 @@
 function klik() {
-    alert("Het werkt!");
+    alert("Nice! Het werkt 🎉");
 }
 
 function veranderTekst() {
@@ -8,8 +8,10 @@ function veranderTekst() {
 }
 
 function kleurVeranderen() {
-    document.body.style.backgroundColor =
-        "#" + Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.background =
+        "linear-gradient(135deg, #" +
+        Math.floor(Math.random()*16777215).toString(16) +
+        ", #000)";
 }
 
 function verberg() {
@@ -21,3 +23,4 @@ function verberg() {
         el.style.display = "none";
     }
 }
+``
