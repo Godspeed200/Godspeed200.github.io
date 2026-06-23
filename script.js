@@ -23,4 +23,9 @@ function verberg() {
         el.style.display = "none";
     }
 }
+
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+}
 ``
